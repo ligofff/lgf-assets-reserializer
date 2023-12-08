@@ -1,0 +1,27 @@
+{
+  "name": "com.ligofff.lgf-assets-reserializer",
+  "displayName": "Ligofff - LGF Assets Reserializer",
+  "version": "0.1.0",
+  "unity": "2022.2",
+  "description": "Package, that adds option for reserialize assets in project",
+  "keywords": [
+    "unity",
+	"unity3d",
+	"upm",
+    "ligofff",
+    "utility"
+  ],
+  "homepage": "https://github.com/ligofff/lgf-assets-reserializer.git",
+  "bugs": {
+    "url": "https://github.com/ligofff/lgf-assets-reserializer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ligofff/lgf-assets-reserializer.git"
+  },
+  "license": "MIT",
+  "author": "Ligofff (https://ligofff.com)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

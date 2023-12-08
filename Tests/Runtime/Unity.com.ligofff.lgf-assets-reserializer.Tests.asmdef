@@ -1,0 +1,11 @@
+{
+  "name": "Unity.com.ligofff.lgf-assets-reserializer.Tests",
+  "references": [
+    "Unity.com.ligofff.lgf-assets-reserializer"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": []
+}
