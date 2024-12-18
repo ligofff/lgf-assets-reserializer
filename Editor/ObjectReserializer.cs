@@ -20,7 +20,20 @@ namespace Editor
         [MenuItem("Assets/Reserialize Asset")]
         private static void ReserializeAsset()
         {
-            AssetDatabase.ForceReserializeAssets(new List<string>(){AssetDatabase.GetAssetPath(Selection.activeObject)});
+            // If folder - reserialize all assets in this folder
+            if (Selection.activeObject is DefaultAsset)
+            {
+                if (EditorUtility.DisplayDialog($"Reserialize All Assets in folder {Selection.activeObject}?", "Are you sure?", "Yes", "No"))
+                {
+                    var path = AssetDatabase.GetAssetPath(Selection.activeObject);
+                    var assets = AssetDatabase.FindAssets("", new[] {path}).Select(AssetDatabase.GUIDToAssetPath);
+                    AssetDatabase.ForceReserializeAssets(assets);
+                }
+            }
+            else
+            {
+                AssetDatabase.ForceReserializeAssets(new List<string>(){AssetDatabase.GetAssetPath(Selection.activeObject)});
+            }
         }
         
         [MenuItem("Assets/Reserialize Asset", true)]
